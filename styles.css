@@ -257,4 +257,7 @@ body {
         padding: 8px 10px;
         font-size: 0.9rem;
     }
+    .search-btn{
+        height: 49px;
+    }  
 }
