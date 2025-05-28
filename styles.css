@@ -44,6 +44,8 @@ body {
 .search-box {
     background: white;
     border-radius: 50px;
+    width: 60%;
+    margin: 0 auto;
     padding: 12px 25px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     border: none;
@@ -258,6 +260,7 @@ body {
         font-size: 0.9rem;
     }
     .search-btn{
-        height: 49px;
-    }  
+        padding: 10px 15px;
+        height: 48px;
+    }    
 }
