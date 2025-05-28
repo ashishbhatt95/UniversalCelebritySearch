@@ -119,7 +119,20 @@ function calculateAge(birthDate, deathDate = null) {
 }
 
 async function searchCelebrity() {
-    const name = document.getElementById("searchInput").value.trim();
+
+    const input = document.getElementById("searchInput").value.trim();
+
+    function toTitleCase(str) {
+    return str
+    .toLowerCase()
+    .split(" ")
+    .filter(word => word.length > 0)
+    .map(word => word[0].toUpperCase() + word.slice(1))
+    .join(" ");
+    }
+
+    const name = toTitleCase(input);
+
     if (!name) {
         showAlert("Please enter a celebrity name", "warning");
         return;
@@ -230,7 +243,7 @@ async function searchCelebrity() {
 
         if (details.spouses.length) {
             html += `
-                <tr>
+                <tr>fetchCelebrityDetails
                     <th><i class="fas fa-heart"></i> Spouse</th>
                     <td>${details.spouses.join(", ")}</td>
                 </tr>`;
